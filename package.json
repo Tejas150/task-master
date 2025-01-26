@@ -1,0 +1,51 @@
+{
+  "name": "task-master",
+  "version": "1.0.0",
+  "description": "A backend system for a task tracking and management application that facilitates collaboration and organization within teams or projects. The application allows users to create, assign, and track tasks, as well as collaborate with team members through comments and attachments",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "dev": "nodemon -r dotenv/config server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tejas150/task-master.git"
+  },
+  "collectCoverage": true,
+  "collectCoverageFrom": ["src/**/*.{js,ts}", "!src/**/*.test.js"],
+  "coverageDirectory": "coverage",
+  "coverageReporters": ["text", "lcov", "html"],
+  "coverageThreshold": {
+    "global": {
+      "statements": 90,
+      "branches": 90,
+      "functions": 90,
+      "lines": 90
+    }
+  },
+  "author": "Tejas150",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/Tejas150/task-master/issues"
+  },
+  "homepage": "https://github.com/Tejas150/task-master#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "celebrate": "^15.0.3",
+    "express": "^4.21.1",
+    "express-async-errors": "^3.1.1",
+    "http-errors": "^2.0.0",
+    "joi": "^17.13.3",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^5.9.2",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "eslint": "^9.15.0",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.7",
+    "supertest": "^7.0.0"
+  }
+}
